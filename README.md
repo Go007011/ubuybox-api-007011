@@ -20,7 +20,6 @@ Primary backend Azure Functions app for UBUYBOX API endpoints.
 - `GET /api/dashboard/orders`
 - `GET /api/dashboard/charts`
 - `GET /api/dashboard/spvs`
-- `GET /api/dashboard/spvs/:spvId`
 
 ## Azure App Settings (Google Sheets)
 - `GOOGLE_CLIENT_EMAIL`
