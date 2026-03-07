@@ -1,8 +1,8 @@
-name: Deploy UBUYBOX API to Azure
-
-permissions:
-  id-token: write
-  contents: read
+name: Deploy UBUYBOX API
+# Repo lane mapping:
+# - GitHub repo: Go007011/ubuybox-api-007011
+# - Azure Function App: ubuybox-api-007011
+# - Expected OIDC subject: repo:Go007011/ubuybox-api-007011:ref:refs/heads/main
 
 on:
   push:
@@ -10,12 +10,18 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   NODE_VERSION: "20.x"
   AZURE_FUNCTIONAPP_NAME: "ubuybox-api-007011"
 
 jobs:
-  build:
+  deploy:
+    # Prevent cross-repo deployment if this workflow is copied elsewhere.
+    if: github.repository == 'Go007011/ubuybox-api-007011'
     runs-on: ubuntu-latest
 
     steps:
@@ -28,43 +34,16 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Build deployment package from /api
-        run: |
-          rm -rf build-artifact
-          mkdir -p build-artifact
-          cp -R api/* build-artifact/
-          cp package.json build-artifact/
-          if [ -f package-lock.json ]; then cp package-lock.json build-artifact/; fi
-          if [ -f host.json ]; then cp host.json build-artifact/; fi
-
-      - name: Install production dependencies in package
-        working-directory: ./build-artifact
         run: npm install --omit=dev
 
-      - name: Archive deployment package
+      - name: Prepare deployable app root in /api
         run: |
-          cd build-artifact
-          zip -r ../release.zip .
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: functionapp-package
-          path: release.zip
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: functionapp-package
+          cp host.json api/host.json
+          cp package.json api/package.json
+          if [ -f package-lock.json ]; then cp package-lock.json api/package-lock.json; fi
 
       - name: Azure Login
+        # API repo must use API-specific client ID secret with shared tenant/subscription secrets.
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID_API }}
@@ -76,5 +55,4 @@ jobs:
         uses: Azure/functions-action@v1
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          slot-name: Production
-          package: ./release.zip
+          package: ./api

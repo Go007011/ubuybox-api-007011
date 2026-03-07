@@ -1,7 +1,7 @@
 {
-  "name": "ubuybox-enforcement-engine",
+  "name": "ubuybox-api-007011",
   "version": "1.0.0",
-  "description": "UBUYBOX Rule Enforcement Engine",
+  "description": "UBUYBOX primary backend API",
   "main": "index.js",
   "scripts": {
     "start": "func start"
