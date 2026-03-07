@@ -22,10 +22,12 @@ Primary backend Azure Functions app for UBUYBOX API endpoints.
 - `GET /api/dashboard/spvs`
 
 ## Azure App Settings (Google Sheets)
-- `GOOGLE_CLIENT_EMAIL`
-- `GOOGLE_PRIVATE_KEY`
 - `GOOGLE_SHEET_ID`
 - `GOOGLE_SHEETS_RANGE`
+
+Optional (enables private sheet/service-account mode):
+- `GOOGLE_CLIENT_EMAIL`
+- `GOOGLE_PRIVATE_KEY`
 
 Optional override ranges (if you need separate tabs in future):
 - `GOOGLE_SHEET_RANGE_DEALS`

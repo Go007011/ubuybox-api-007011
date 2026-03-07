@@ -1,7 +1,7 @@
+const { hasServiceAccountConfig } = require("../shared/googleSheetsClient");
+
 module.exports = async function (context, req) {
   const requiredSheetVars = [
-    "GOOGLE_CLIENT_EMAIL",
-    "GOOGLE_PRIVATE_KEY",
     "GOOGLE_SHEET_ID",
     "GOOGLE_SHEETS_RANGE",
   ];
@@ -16,6 +16,7 @@ module.exports = async function (context, req) {
       status: "running",
       sheetsReady: missingVars.length === 0,
       missingSheetConfig: missingVars,
+      sheetsAuthMode: hasServiceAccountConfig() ? "service-account" : "public-gviz",
     },
   };
 };
