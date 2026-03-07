@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 env:
-  NODE_VERSION: "20.x"
+  NODE_VERSION: "24.x"
   AZURE_FUNCTIONAPP_NAME: "ubuybox-api-007011"
 
 jobs:
