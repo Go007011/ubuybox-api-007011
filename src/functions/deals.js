@@ -1,37 +1,44 @@
-const { app } = require("@azure/functions");
-const { getSheetRows, parseNumericValue } = require("../services/googleSheets");
+const { getSheetRows } = require("../services/googleSheets");
 
-app.http("deals", {
-  methods: ["GET"],
-  authLevel: "anonymous",
-  handler: async () => {
-    try {
-      const rows = await getSheetRows();
-      const deals = rows.map((row) => ({
-        dealId: row.Deal_ID || "",
-        property: row["Property Address"] || "",
-        state: row.State || "",
-        county: row.County || "",
-        purchasePrice: parseNumericValue(row["Purchase Price"]),
-        status: row.Status || "",
-        capitalRequired: parseNumericValue(row.TOTAL_CAPITAL_REQUIRED),
-        capitalRaised: parseNumericValue(row.TOTAL_RAISED),
-        unitsTotal: parseNumericValue(row.TOTAL_UNITS),
-        unitsSold: parseNumericValue(row.UNITS_SOLD),
-        unitsRemaining: parseNumericValue(row.UNITS_REMAINING),
-      }));
+module.exports = async function (context, req) {
 
-      return {
-        jsonBody: deals,
-      };
-    } catch (error) {
-      return {
-        status: 500,
-        jsonBody: {
-          error: "Failed to load deals from Google Sheets.",
-          details: error.message,
-        },
-      };
-    }
-  },
-});
+  try {
+
+    const rows = await getSheetRows();
+
+    const deals = rows.map(row => ({
+      dealId: row.Deal || row.deal || row.deal_id || "",
+      spv: row.SPV || row.spv || row.spv_id || "",
+      property: row.Property || row.property || "",
+      city: row.City || row.city || "",
+      state: row.State || row.state || "",
+      county: row.County || row.county || "",
+      price: Number(row.Price || row.price || 0),
+      capitalRequested: Number(row.CapitalRequested || row.capital_requested || 0),
+      capitalRaised: Number(row.CapitalRaised || row.capital_raised || 0),
+      owner: row.Owner || row.owner || "",
+      email: row.Email || row.email || ""
+    }));
+
+    context.res = {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: deals
+    };
+
+  } catch (error) {
+
+    context.log.error("Deals endpoint error:", error);
+
+    context.res = {
+      status: 500,
+      body: {
+        error: "Failed to load deals"
+      }
+    };
+
+  }
+
+};
