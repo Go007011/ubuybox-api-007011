@@ -1,32 +1,71 @@
-const { app } = require("@azure/functions");
-const { getSheetRows, parseNumericValue } = require("../services/googleSheets");
+const { getSheetRows } = require("../services/googleSheets");
 
-app.http("spvs", {
-  methods: ["GET"],
-  authLevel: "anonymous",
-  handler: async () => {
-    try {
-      const rows = await getSheetRows();
-      const spvs = rows.map((row) => ({
-        spvId: row.SPV_ID || "",
-        dealId: row.Deal_ID || "",
-        capitalTarget: parseNumericValue(row.TOTAL_CAPITAL_REQUIRED),
-        capitalCommitted: parseNumericValue(row.TOTAL_RAISED),
-        unitsTotal: parseNumericValue(row.TOTAL_UNITS),
-        unitsRemaining: parseNumericValue(row.UNITS_REMAINING),
-      }));
+module.exports = async function (context, req) {
 
-      return {
-        jsonBody: spvs,
-      };
-    } catch (error) {
-      return {
-        status: 500,
-        jsonBody: {
-          error: "Failed to load SPVs from Google Sheets.",
-          details: error.message,
-        },
-      };
-    }
-  },
-});
+  try {
+
+    const rows = await getSheetRows();
+
+    const spvMap = {};
+
+    rows.forEach(row => {
+
+      const spvId = row.SPV || row.spv || row.spv_id;
+
+      if (!spvId) return;
+
+      if (!spvMap[spvId]) {
+        spvMap[spvId] = {
+          spv: spvId,
+          deals: [],
+          capitalRequested: 0,
+          capitalRaised: 0
+        };
+      }
+
+      const capitalRequested = Number(row.CapitalRequested || row.capital_requested || 0);
+      const capitalRaised = Number(row.CapitalRaised || row.capital_raised || 0);
+
+      spvMap[spvId].deals.push({
+        dealId: row.Deal || row.deal || row.deal_id || "",
+        property: row.Property || "",
+        city: row.City || "",
+        state: row.State || "",
+        price: Number(row.Price || 0)
+      });
+
+      spvMap[spvId].capitalRequested += capitalRequested;
+      spvMap[spvId].capitalRaised += capitalRaised;
+
+    });
+
+    const spvs = Object.values(spvMap).map(spv => ({
+      ...spv,
+      fillPercent:
+        spv.capitalRequested > 0
+          ? Math.round((spv.capitalRaised / spv.capitalRequested) * 100)
+          : 0
+    }));
+
+    context.res = {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: spvs
+    };
+
+  } catch (error) {
+
+    context.log.error("SPV endpoint error:", error);
+
+    context.res = {
+      status: 500,
+      body: {
+        error: "Failed to load SPVs"
+      }
+    };
+
+  }
+
+};
