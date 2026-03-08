@@ -1,13 +1,41 @@
-const { app } = require('@azure/functions');
+const { getSheetRows } = require("../services/googleSheets");
 
-app.http('health', {
-    methods: ['GET', 'POST'],
-    authLevel: 'anonymous',
-    handler: async (request, context) => {
-        context.log(`Http function processed request for url "${request.url}"`);
+const startTime = Date.now();
 
-        const name = request.query.get('name') || await request.text() || 'world';
+module.exports = async function (context, req) {
 
-        return { body: `Hello, ${name}!` };
-    }
-});
+  try {
+
+    const rows = await getSheetRows();
+
+    const uptimeSeconds = Math.floor((Date.now() - startTime) / 1000);
+
+    context.res = {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: {
+        status: "ok",
+        api: "UBUYBOX API",
+        uptimeSeconds,
+        sheetRowsLoaded: rows.length,
+        timestamp: new Date().toISOString()
+      }
+    };
+
+  } catch (error) {
+
+    context.log.error("Health check failed:", error);
+
+    context.res = {
+      status: 500,
+      body: {
+        status: "error",
+        message: "API health check failed"
+      }
+    };
+
+  }
+
+};
