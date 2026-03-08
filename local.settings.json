@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SHEET_ID": "1N8-PD3654Qcd65r9Etc2Z1ayZbHB0X5m__URQYFYVeY"
+  }
+}
