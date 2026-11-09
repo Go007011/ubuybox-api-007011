@@ -1,0 +1,371 @@
+{
+  "scannedAt": "2026-11-09T02:18:44Z",
+  "readOnly": true,
+  "source": {
+    "activeDirectoryUrl": "https://www.fractional.app/projects",
+    "pastDirectoryUrl": "https://www.fractional.app/projects/past"
+  },
+  "coverage": {
+    "active": {
+      "directoryUrl": "https://www.fractional.app/projects",
+      "label": "Active projects",
+      "coverage": "complete",
+      "listings": 15,
+      "pagination": "single scrollable list; first screen checked, then scrolled until the list would not move further",
+      "accessBarrier": null
+    },
+    "past": {
+      "directoryUrl": "https://www.fractional.app/projects/past",
+      "label": "Past projects",
+      "coverage": "complete",
+      "listings": 34,
+      "pagination": "scroll loads further cards; first screen checked, then scrolled until the list would not move further",
+      "accessBarrier": null
+    }
+  },
+  "projects": [
+    {
+      "name": "The Depreciation Strategy Club 2.0",
+      "sourceUrl": "https://www.fractional.app/p/01KZ9XT8EW06H83PZ338M4Y5Z6",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "The Collective Co-Living Club - Atlanta",
+      "sourceUrl": "https://www.fractional.app/p/01KP9HPEYSAXTTN567K20AXPY7",
+      "category": "Active",
+      "status": "118% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "The Value-Add Multifamily Club",
+      "sourceUrl": "https://www.fractional.app/p/01KWFTAJ74MBYSEQ5KVBEY1T66",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Cleveland Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KYQQ7Y3P3ZAPAGCECVVNQ0DD",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Nejasmich Peninsula Development Club",
+      "sourceUrl": "https://www.fractional.app/p/01M0FT4A3KNS7W6C0M1GF71PSS",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Premium Circle Club",
+      "sourceUrl": "https://www.fractional.app/p/01KX16M3CZD2GA97JFWK2QQ1HJ",
+      "category": "Active",
+      "status": "105% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Flip Zombie Houses with Tommy Harr Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01M08N30GB05YBTCXW54RFMA98",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "The Last Frontier Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KMBT70G7N3640J2RNFS7113V",
+      "category": "Active",
+      "status": "93% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "University Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KM6G8GRGSC34XTDPCT2TFJZF",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Boheme Retreats Catskills Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KRH49TFAJEF7PY5AST16S2YH",
+      "category": "Active",
+      "status": "101% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Workforce Housing Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KV8NQWB43FZNESX1CGC74E3Q",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "The Luckey Investment Club 2.0",
+      "sourceUrl": "https://www.fractional.app/p/01KG5TJRT5T02Z4XBKW8FETZZ6",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Detroit New Development Club",
+      "sourceUrl": "https://www.fractional.app/p/01K63F8QE5KY6VCHP97PZZE2P4",
+      "category": "Active",
+      "status": "95% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "The Luckey Capital Group Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01K8VEPWCQR4VD538XGZ40AS0Y",
+      "category": "Active",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "Mailbox Money Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01K6NETQWE258H3JRNAN29NKY9",
+      "category": "Active",
+      "status": "113% Funded",
+      "scannedAt": "2026-11-09T02:15:42Z"
+    },
+    {
+      "name": "The Patriot Capital Club 2.0",
+      "sourceUrl": "https://www.fractional.app/p/01KJ8PH6XFGKNE4SGD1NY18EAA",
+      "category": "Past",
+      "status": "117% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "RV Lets Go!!",
+      "sourceUrl": "https://www.fractional.app/p/01KHP0QM3NKNJHZGQAGTVTZDKZ",
+      "category": "Past",
+      "status": "101% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Club de Inversión Impulso",
+      "sourceUrl": "https://www.fractional.app/p/01K869MXJBJXBYBFE9YQZFX9J7",
+      "category": "Past",
+      "status": "120% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Investment Joy Laundromat Club",
+      "sourceUrl": "https://www.fractional.app/p/01KTVV30EBCS2K54DZYC2K5WS3",
+      "category": "Past",
+      "status": "104% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Bison Peak Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KEFRB9QAF5DP6AKWZEABH7AS",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Small Business Funding Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01K5RQ6VX8A5WNF0GK7VQ5G51S",
+      "category": "Past",
+      "status": "115% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Amigos Investment Club 3.0",
+      "sourceUrl": "https://www.fractional.app/p/01KBDQQKPQJR0A75NFW3GEDSS2",
+      "category": "Past",
+      "status": "121% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Fire Tower Retreats Club",
+      "sourceUrl": "https://www.fractional.app/p/01KVBM0GR4WPMNTT9ASD2T7GQ6",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The TELOS Capital Club",
+      "sourceUrl": "https://www.fractional.app/p/01KKH87RPC3YK96PH5W1VK6DR4",
+      "category": "Past",
+      "status": "157% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Idaho Real Estate Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KPVTYT7PBCNR3GQ3HXFHG53P",
+      "category": "Past",
+      "status": "105% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Renovation Club",
+      "sourceUrl": "https://www.fractional.app/p/01KWW846FWNKZQ9YZPQEXWB7NX",
+      "category": "Past",
+      "status": "77% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "B2R B2S Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KS3XCDNM11BJCEKE0T6D321M",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Shepherd Investment Club 1",
+      "sourceUrl": "https://www.fractional.app/p/01KT5K0QEX5CV3XC6GM6EFRBGZ",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Pioneer RV Club",
+      "sourceUrl": "https://www.fractional.app/p/01KTPW3CQC31HKBX7QQ0PDFBDR",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Easy Button With Pace's Team!",
+      "sourceUrl": "https://www.fractional.app/p/01K7DF34BXB4QFPCVEF7V648S3",
+      "category": "Past",
+      "status": "104% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "RV Ready Set Go Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KF105CYFK15P2YT830X20XHZ",
+      "category": "Past",
+      "status": "104% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "WCG Mobile Home Park Club",
+      "sourceUrl": "https://www.fractional.app/p/01KNSR7ZXPM9PMVVNZQD4MJXA0",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Curative Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KFKKKJM13QDZ6MCBRXMMZVNK",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Star Laundry Club 2.0",
+      "sourceUrl": "https://www.fractional.app/p/01KCVZ109FWW2ZW0GNC688Y4B8",
+      "category": "Past",
+      "status": "109% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Patriot Capital Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01K9AVD24KH92Q664VVVMW32EA",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Depreciation Strategy Club",
+      "sourceUrl": "https://www.fractional.app/p/01KMRD9TJ9RTKYKDAKNTZ8NKSZ",
+      "category": "Past",
+      "status": "104% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The ez Club",
+      "sourceUrl": "https://www.fractional.app/p/01KKDT9NFWW3YVVZQZA9RS89GN",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "M.O.R.E. Investor Club",
+      "sourceUrl": "https://www.fractional.app/p/01KFYCS81C8CBV0SBMAPJPE311",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "INVSTR LENDING CLUB",
+      "sourceUrl": "https://www.fractional.app/p/01KECPWEWVPGCB9DGWNFT05M0T",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Stonybrook Hospitality Club",
+      "sourceUrl": "https://www.fractional.app/p/01KCT67NC6DKJ1QRXH8B616R36",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Fractional Legends Launch LLC",
+      "sourceUrl": "https://www.fractional.app/p/01K9TDK66STPDNPBZBH8M7JNAP",
+      "category": "Past",
+      "status": "136% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Telos Multifamily Mastermind Inner Circle Club",
+      "sourceUrl": "https://www.fractional.app/p/01KG2QEKQZ02V1338MBF175SZD",
+      "category": "Past",
+      "status": "141% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Empresarios Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KCMYS36F1SW5PYH4FKES6YT6",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The 20/20 Co-Living Development Club",
+      "sourceUrl": "https://www.fractional.app/p/01KC49K7M3QSTNJH67THDGVQ22",
+      "category": "Past",
+      "status": "123% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Renewable Energy Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01KF24V59EADHTCTDYNZ8KCE9G",
+      "category": "Past",
+      "status": "104% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Reverie Hospitality Club",
+      "sourceUrl": "https://www.fractional.app/p/01K757N8KTZ2D06K67H44QHWAM",
+      "category": "Past",
+      "status": "100% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "The Star Laundry Club",
+      "sourceUrl": "https://www.fractional.app/p/01K9AT9D6HET08P5A377B49JHD",
+      "category": "Past",
+      "status": "101% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Adult Residential Facility Investment Club",
+      "sourceUrl": "https://www.fractional.app/p/01K6E3XJP4CYV2KT3V0DE2TVA2",
+      "category": "Past",
+      "status": "103% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    },
+    {
+      "name": "Own a Colorado Title Company with Caleb Christopher",
+      "sourceUrl": "https://www.fractional.app/p/01K75B7DHGBG1X31EBCD4DX36N",
+      "category": "Past",
+      "status": "107% Funded",
+      "scannedAt": "2026-11-09T02:18:44Z"
+    }
+  ]
+}
