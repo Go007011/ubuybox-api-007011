@@ -21,6 +21,14 @@ Primary backend Azure Functions app for UBUYBOX API endpoints.
 - `GET /api/dashboard/charts`
 - `GET /api/dashboard/spvs`
 
+## Fractional catalog
+Read-only snapshot of the public Fractional Active and Past project directories. The endpoint serves the checked-in snapshot. It does not call Fractional and it does not write data.
+
+- `GET /api/fractional/catalog`
+- Optional query: `category` (`Active` or `Past`), `status` (displayed status, such as `Funded` or `118% Funded`), `limit`
+
+Local check: `node scripts/test-fractional-catalog.js`
+
 ## Azure App Settings (Google Sheets)
 - `GOOGLE_SHEET_ID`
 - `GOOGLE_SHEETS_RANGE`
